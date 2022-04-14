@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My New Hugo Site</title>
+    <title>Tags on gofulljs blog</title>
     <link>https://gofulljs.github.io/go/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
+    <description>Recent content in Tags on gofulljs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Apr 2022 12:26:02 +0800</lastBuildDate><atom:link href="https://gofulljs.github.io/go/tags/index.xml" rel="self" type="application/rss+xml" />
