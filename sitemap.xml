@@ -2,13 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://gofulljs.github.io/go/about/</loc>
-    <lastmod>2022-04-13T17:18:57+08:00</lastmod>
-  </url><url>
     <loc>https://gofulljs.github.io/go/categories/</loc>
+    <lastmod>2022-04-14T12:26:02+08:00</lastmod>
+  </url><url>
+    <loc>https://gofulljs.github.io/go/tags/dom/</loc>
+    <lastmod>2022-04-14T12:26:02+08:00</lastmod>
+  </url><url>
+    <loc>https://gofulljs.github.io/go/tags/general/</loc>
+    <lastmod>2022-04-14T12:26:02+08:00</lastmod>
   </url><url>
     <loc>https://gofulljs.github.io/go/</loc>
+    <lastmod>2022-04-14T12:26:02+08:00</lastmod>
+  </url><url>
+    <loc>https://gofulljs.github.io/go/categories/program/</loc>
+    <lastmod>2022-04-14T12:26:02+08:00</lastmod>
+  </url><url>
+    <loc>https://gofulljs.github.io/go/programs/</loc>
+    <lastmod>2022-04-14T12:26:02+08:00</lastmod>
   </url><url>
     <loc>https://gofulljs.github.io/go/tags/</loc>
+    <lastmod>2022-04-14T12:26:02+08:00</lastmod>
+  </url><url>
+    <loc>https://gofulljs.github.io/go/programs/general/ext_lib/dom_lib/base/</loc>
+    <lastmod>2022-04-14T12:26:02+08:00</lastmod>
+  </url><url>
+    <loc>https://gofulljs.github.io/go/programs/nodejs/ext_lib/dom_lib/cheerio/base/</loc>
+    <lastmod>2022-04-14T12:21:25+08:00</lastmod>
+  </url><url>
+    <loc>https://gofulljs.github.io/go/tags/nodejs/</loc>
+    <lastmod>2022-04-14T12:21:25+08:00</lastmod>
+  </url><url>
+    <loc>https://gofulljs.github.io/go/tags/go/</loc>
+    <lastmod>2022-04-14T10:11:56+08:00</lastmod>
+  </url><url>
+    <loc>https://gofulljs.github.io/go/programs/golang/ext_lib/dom_lib/goquery/base/</loc>
+    <lastmod>2022-04-14T10:11:56+08:00</lastmod>
+  </url><url>
+    <loc>https://gofulljs.github.io/go/about/</loc>
+    <lastmod>2022-04-13T17:18:57+08:00</lastmod>
   </url>
 </urlset>

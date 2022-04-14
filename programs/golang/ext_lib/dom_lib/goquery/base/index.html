@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.96.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>golang 解析 html 文本 &middot; My New Hugo Site</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://gofulljs.github.io/go/"><h1>My New Hugo Site</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://gofulljs.github.io/go/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>golang 解析 html 文本</h1>
+  <time datetime=2022-04-14T10:11:56&#43;0800 class="post-date">Thu, Apr 14, 2022</time>
+  <h2 id="goquery-入门">goquery 入门</h2>
+<p>goquery 库 可以用来解析超文本文件内容，用来方便的分析相关内容</p>
+<h3 id="获取h1标签">获取h1标签</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestPrintH1</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">content</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;!DOCTYPE html&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;html lang=&#34;en&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;head&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&lt;meta charset=&#34;UTF-8&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&lt;title&gt;Document&lt;/title&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/head&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;body&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&lt;h1&gt;hello dom html&lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/body&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/html&gt;	
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">doc</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">NewDocumentFromReader</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">content</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">h1Html</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">FindMatcher</span>(<span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">Single</span>(<span style="color:#e6db74">&#34;h1&#34;</span>)).<span style="color:#a6e22e">Html</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">assert</span>.<span style="color:#a6e22e">NoError</span>(<span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">expectH1Html</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`hello dom html`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">assert</span>.<span style="color:#a6e22e">Equal</span>(<span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">expectH1Html</span>, <span style="color:#a6e22e">h1Html</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="向head标签中追加script标签">向head标签中追加script标签</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestHeadInsertTag</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">content</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;!DOCTYPE html&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;html lang=&#34;en&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;head&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&lt;meta charset=&#34;UTF-8&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&lt;title&gt;Document&lt;/title&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/head&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;body&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&lt;h1&gt;hello dom html&lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/body&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/html&gt;	
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">doc</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">NewDocumentFromReader</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">content</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">q</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">FindMatcher</span>(<span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">Single</span>(<span style="color:#e6db74">&#34;head&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">expectHtml</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`let a = 1`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">appendHtml</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;&lt;script&gt;%v&lt;/script&gt;&#34;</span>, <span style="color:#a6e22e">expectHtml</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">AppendHtml</span>(<span style="color:#a6e22e">appendHtml</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">q</span> = <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">FindMatcher</span>(<span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">Single</span>(<span style="color:#e6db74">&#34;head&gt;script&#34;</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">html</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">Html</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">assert</span>.<span style="color:#a6e22e">NoError</span>(<span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">assert</span>.<span style="color:#a6e22e">Equal</span>(<span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">expectHtml</span>, <span style="color:#a6e22e">html</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

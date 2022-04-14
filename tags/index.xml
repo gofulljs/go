@@ -5,6 +5,43 @@
     <link>https://gofulljs.github.io/go/tags/</link>
     <description>Recent content in Tags on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://gofulljs.github.io/go/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Apr 2022 12:26:02 +0800</lastBuildDate><atom:link href="https://gofulljs.github.io/go/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dom</title>
+      <link>https://gofulljs.github.io/go/tags/dom/</link>
+      <pubDate>Thu, 14 Apr 2022 12:26:02 +0800</pubDate>
+      
+      <guid>https://gofulljs.github.io/go/tags/dom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>general</title>
+      <link>https://gofulljs.github.io/go/tags/general/</link>
+      <pubDate>Thu, 14 Apr 2022 12:26:02 +0800</pubDate>
+      
+      <guid>https://gofulljs.github.io/go/tags/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://gofulljs.github.io/go/tags/nodejs/</link>
+      <pubDate>Thu, 14 Apr 2022 12:21:25 +0800</pubDate>
+      
+      <guid>https://gofulljs.github.io/go/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://gofulljs.github.io/go/tags/go/</link>
+      <pubDate>Thu, 14 Apr 2022 10:11:56 +0800</pubDate>
+      
+      <guid>https://gofulljs.github.io/go/tags/go/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

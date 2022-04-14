@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on My New Hugo Site</title>
+    <link>https://gofulljs.github.io/go/tags/nodejs/</link>
+    <description>Recent content in nodejs on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Apr 2022 12:21:25 +0800</lastBuildDate><atom:link href="https://gofulljs.github.io/go/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>node 解析html 文本</title>
+      <link>https://gofulljs.github.io/go/programs/nodejs/ext_lib/dom_lib/cheerio/base/</link>
+      <pubDate>Thu, 14 Apr 2022 12:21:25 +0800</pubDate>
+      
+      <guid>https://gofulljs.github.io/go/programs/nodejs/ext_lib/dom_lib/cheerio/base/</guid>
+      <description>获取h1标签 function TestPrintH1(){  const content = ` &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;hello dom html&amp;lt;/h1&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;	`   const $ = cheerio.load(content)   const h1Html = $(&amp;#39;h1&amp;#39;).html()  	const expectH1Html = `hello dom html2` 	 assert.equal(h1Html, expectH1Html) } </description>
+    </item>
+    
+  </channel>
+</rss>

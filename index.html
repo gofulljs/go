@@ -1,32 +1,38 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
-<head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.96.0" />
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us"><head>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Hugo 0.96.0"/>
 
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>My New Hugo Site</title>
-  <meta name="description" content="" />
+  <meta name="description" content=""/>
 
   
-  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/print.css" media="print"/>
+  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/poole.css"/>
+  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/syntax.css"/>
+  <link type="text/css" rel="stylesheet" href="https://gofulljs.github.io/go/css/hyde.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700"/>
 
 
   
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png"/>
+  <link rel="shortcut icon" href="/favicon.png"/>
 
   
-  <link href="https://gofulljs.github.io/go/index.xml" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
+  <link href="https://gofulljs.github.io/go/index.xml" rel="alternate" type="application/rss+xml" title="My New Hugo Site"/>
   
-</head>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c27562b911a560bbcbd9a3c2f0a816d1";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></head>
 
   <body class=" ">
   <aside class="sidebar">
@@ -45,7 +51,7 @@
       </ul>
     </nav>
 
-    <p>&copy; 2022. All rights reserved. </p>
+    <p>© 2022. All rights reserved. </p>
   </div>
 </aside>
 
@@ -53,9 +59,35 @@
     <div class="posts">
 <article class="post">
   <h1 class="post-title">
+    <a href="https://gofulljs.github.io/go/programs/general/ext_lib/dom_lib/base/">后端Dom库操作</a>
+  </h1>
+  <time datetime="2022-04-14T12:26:02+0800" class="post-date">2022年04月14日 12:26:02</time>
+  各语言解析超文本语言
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://gofulljs.github.io/go/programs/nodejs/ext_lib/dom_lib/cheerio/base/">node 解析html 文本</a>
+  </h1>
+  <time datetime="2022-04-14T12:21:25+0800" class="post-date">2022年04月14日 12:21:25</time>
+  获取h1标签 function TestPrintH1(){  const content = ` &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;hello dom html&lt;/h1&gt; &lt;/body&gt; &lt;/html&gt;	`   const $ = cheerio.load(content)   const h1Html = $(&#39;h1&#39;).html()  	const expectH1Html = `hello dom html2` 	 assert.equal(h1Html, expectH1Html) } 
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://gofulljs.github.io/go/programs/golang/ext_lib/dom_lib/goquery/base/">golang 解析 html 文本</a>
+  </h1>
+  <time datetime="2022-04-14T10:11:56+0800" class="post-date">2022年04月14日 10:11:56</time>
+  goquery 入门 goquery 库 可以用来解析超文本文件内容，用来方便的分析相关内容
+获取h1标签 func TestPrintH1(t *testing.T) { 	content := ` &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;hello dom html&lt;/h1&gt; &lt;/body&gt; &lt;/html&gt;	` 	doc, err := goquery.NewDocumentFromReader(strings.NewReader(content)) 	if err != nil { 	t.Fatal(err) 	}  	h1Html, err := doc.FindMatcher(goquery.Single(&#34;h1&#34;)).Html() 	assert.NoError(t, err)  	expectH1Html := `hello dom html` 	assert.Equal(t, expectH1Html, h1Html) } 向head标签中追加script标签  func TestHeadInsertTag(t *testing.
+  
+  <div class="read-more-link">
+    <a href="/go/programs/golang/ext_lib/dom_lib/goquery/base/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
     <a href="https://gofulljs.github.io/go/about/">About</a>
   </h1>
-  <time datetime="2022-04-13T17:18:57&#43;0800" class="post-date">Wed, Apr 13, 2022</time>
+  <time datetime="2022-04-13T17:18:57+0800" class="post-date">2022年04月13日 17:18:57</time>
   第一个 go 相关博客 欢迎支持
   
 </article>
@@ -65,5 +97,6 @@
     
       
     
-  </body>
-</html>
+  
+
+</body></html>

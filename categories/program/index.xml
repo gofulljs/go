@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://gofulljs.github.io/go/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>program on My New Hugo Site</title>
+    <link>https://gofulljs.github.io/go/categories/program/</link>
+    <description>Recent content in program on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Apr 2022 12:26:02 +0800</lastBuildDate><atom:link href="https://gofulljs.github.io/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 12:26:02 +0800</lastBuildDate><atom:link href="https://gofulljs.github.io/go/categories/program/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>后端Dom库操作</title>
       <link>https://gofulljs.github.io/go/programs/general/ext_lib/dom_lib/base/</link>
@@ -33,15 +33,6 @@
       <guid>https://gofulljs.github.io/go/programs/golang/ext_lib/dom_lib/goquery/base/</guid>
       <description>goquery 入门 goquery 库 可以用来解析超文本文件内容，用来方便的分析相关内容
 获取h1标签 func TestPrintH1(t *testing.T) { 	content := ` &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;hello dom html&amp;lt;/h1&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;	` 	doc, err := goquery.NewDocumentFromReader(strings.NewReader(content)) 	if err != nil { 	t.Fatal(err) 	}  	h1Html, err := doc.FindMatcher(goquery.Single(&amp;#34;h1&amp;#34;)).Html() 	assert.NoError(t, err)  	expectH1Html := `hello dom html` 	assert.Equal(t, expectH1Html, h1Html) } 向head标签中追加script标签  func TestHeadInsertTag(t *testing.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://gofulljs.github.io/go/about/</link>
-      <pubDate>Wed, 13 Apr 2022 17:18:57 +0800</pubDate>
-      
-      <guid>https://gofulljs.github.io/go/about/</guid>
-      <description>第一个 go 相关博客 欢迎支持</description>
     </item>
     
   </channel>
